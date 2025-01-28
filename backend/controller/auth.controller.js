@@ -38,7 +38,7 @@ export const fetch = async (req, res) => {
     // const { fetch: name } = req.params;
 
     try {
-        const User = await Data.find();
+        const User = await Data.find().limit(1000);
 
         res.status(200).json(User)
     } catch (error) {
